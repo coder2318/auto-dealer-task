@@ -5,11 +5,12 @@ use App\Http\Controllers\V1\LeadController;
 use App\Http\Controllers\V1\ManagerController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'login'])->name('login');
 
-Route::get('/user', [AuthController::class, 'user'])->middleware('auth:sanctum');
-
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum')->name('logout');
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get('user', [AuthController::class, 'user']);
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+});
 
 Route::group(['middleware' => ['auth:sanctum'], 'prefix' => 'lead'], function () {
     Route::post('create', [LeadController::class, 'createLead']);

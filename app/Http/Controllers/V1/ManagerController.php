@@ -5,6 +5,7 @@ namespace App\Http\Controllers\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\Manager\IndexRequest;
 use App\Http\Requests\V1\Manager\UpdateRequest;
+use App\Http\Resources\LeadResource;
 use App\Services\ManagerService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class ManagerController extends Controller
     {
         $res = $this->service->get($request->validated());
 
-        return response()->successJson($res);
+        return response()->successJson(LeadResource::collection($res));
     }
 
     public function getLead(int $id): JsonResponse

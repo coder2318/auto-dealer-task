@@ -42,4 +42,9 @@ class Lead extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function brands(): array
+    {
+        return Brand::query()->whereIn('id', $this->brand_ids)->get()->toArray();
+    }
+
 }
