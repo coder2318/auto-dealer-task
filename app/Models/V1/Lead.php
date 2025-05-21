@@ -9,6 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property  string $full_name
+ * @property  string $status
+ * @property  string $note
+ * @property  int $user_id
+ * @property  array $brand_ids
+ * @property  string $phone
+ */
 class Lead extends Model
 {
     use SoftDeletes;

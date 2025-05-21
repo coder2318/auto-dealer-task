@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
+/**
+ * @property  string $name
+ * @property  string $email
+ * @property  string $password
+ */
+
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
