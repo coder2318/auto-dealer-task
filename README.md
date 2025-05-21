@@ -1,61 +1,111 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2>Документация 📜</h2>
+<hr>
 
-## About Laravel
+<h2>Установка ⚒️ </h2>
+<hr>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Для установки
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Требуемые версии модуля
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+"php": "^8.2",
+"postgresql": "^14.0"
+"nginx",
+```
+<h2>Запуск приложения</h2>
 
-## Learning Laravel
+Откроется терминал, и следующие коды будут выполнены один за другим.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Установите Composer
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+composer install
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Сгенерируйте уникальный ключ для приложения.
 
-## Laravel Sponsors
+```bash
+php artisan key:generate
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. Миграции
 
-### Premium Partners
+```bash
+php artisan migrate
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+5. Создать пользователя, роль, бренд
+```bash
+php artisan db:seed
+```
 
-## Contributing
+```json
+электронная почта: "manager@example.com",
+пароль: manager12345
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Запустите приложение.
 
-## Code of Conduct
+```bash
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+uz
+<hr>
 
-## Security Vulnerabilities
+<h2>Documentation 📜 </h2>
+<hr>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<h2>Installation ⚒️ </h2>
+<hr>
 
-## License
+Install qilish uchun
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Talab qilinadigan modullar versiyalari
+
+```bash
+"php": "^8.2",
+"postgresql": "^14.0"
+"nginx",
+```
+<h2>Application run</h2>
+
+Terminal ochiladi va quyidagi kodlar birma bir bajariladi.
+
+1. Composer install
+
+```bash
+composer install
+```
+
+3. Application uchun unikal key generate
+
+```bash
+php artisan key:generate
+```
+
+4. Migratsiyalar
+
+```bash
+php artisan migrate
+```
+
+5. User, Role, Brand yaratish uchun
+
+```bash
+php artisan db:seed
+```
+```json
+email: "manager@example.com",
+password: manager12345
+```
+
+6. Applicationni run qilish
+
+```bash
+php artisan serve
+```
+
