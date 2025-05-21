@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
+     * @throws \ReflectionException
      */
     public function boot(): void
     {

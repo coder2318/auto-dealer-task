@@ -22,8 +22,14 @@ class AuthController extends Controller
         ]);
     }
 
-    public function user(Request $request)
+    public function user()
     {
-        return response()->json(auth()->user());
+        return response()->successJson(auth()->user());
+    }
+
+    public function logout()
+    {
+        User::UserApiGuard()->currentAccessToken()->delete();
+        return response()->successJson(['message' => 'Successfully logged out']);
     }
 }
