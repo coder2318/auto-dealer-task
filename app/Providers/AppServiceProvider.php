@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Mixins\ResponseFactoryMixin;
+use App\Models\V1\Lead;
+use App\Observers\LeadObserver;
+use Illuminate\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        ResponseFactory::mixin(new ResponseFactoryMixin());
+        Lead::observe(LeadObserver::class);
+
     }
 }
