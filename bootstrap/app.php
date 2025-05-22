@@ -22,6 +22,6 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withSchedule(function (Schedule $schedule) {
-        $schedule->command('app:change-lead-status-command')->everyMinute();
+        $schedule->command('app:change-lead-status-command')->hourly();
     })
     ->create();
